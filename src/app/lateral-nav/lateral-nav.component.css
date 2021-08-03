@@ -1,5 +1,9 @@
+ul {
+  width: 150px;
+  margin: 5px;
+}
+
 div {
   display: flex;
   flex-direction: row;
-  margin-top: 40px;
 }

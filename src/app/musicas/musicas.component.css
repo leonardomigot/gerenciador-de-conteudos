@@ -1,0 +1,32 @@
+#first{
+  display: flex;
+  flex-direction: row;
+}
+
+#second {
+  width: 500px;
+}
+
+ul li {
+  cursor: pointer;
+}
+
+#deleter {
+  padding: unset;
+  margin: unset;
+  height: 24px;
+  width: 24px;
+}
+
+#lista {
+  display: flex;
+  flex-direction: row;
+}
+
+#spacer {
+  flex-grow: 1;
+}
+
+#autor {
+  color: gray;  
+}

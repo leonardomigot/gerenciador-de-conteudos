@@ -1,0 +1,35 @@
+<div id="first">
+  <div id="second" class="container">
+    <h2>Minhas Músicas</h2>
+
+    <label for="new-musica-name">Nome da musica: </label>
+    <input class="form-control" id="new-musica-name-input" #musicaName />
+    <br>
+    <label for="new-musica-autor">Autor: </label>
+    <input class="form-control" id="new-musica-autor-input" #musicaAutor />
+    <br>
+    <button 
+      class="add-button btn btn-secondary" 
+      (click)="add(musicaName.value, musicaAutor.value); musicaName.value=''; musicaAutor.value=''">
+      Adicionar Música
+    </button>
+    <br>
+    <br>   
+
+    <ul class="musicas list-group">
+      <li 
+        id="lista"
+        class="list-group-item list-group-item-action" 
+        *ngFor="let musica of musicas"
+        routerLink="/musicas/{{musica.id}}"  
+        routerLinkActive="active"
+      >  
+        <span class="badge badge-pill badge-primary">{{musica.id}}</span> {{musica.nomeDaMusica}} <span id="autor">&nbsp; - {{musica.autor}} </span>
+        <div id="spacer"></div>
+        <button id="deleter" class="delete btn btn-danger" title="delete musica"
+        (click)="delete(musica)">x</button>
+      </li>
+    </ul>
+  </div>  
+</div>
+

@@ -1,0 +1,13 @@
+<div *ngIf="filme" class="container">
+  <h2>{{filme.nomeDoFilme}} - ID: {{filme.id}}</h2>   
+  <label for="name">Nome do filme: </label>
+  <input class="form-control" id="name-inp-nome" [(ngModel)]="filme.nomeDoFilme" placeholder="">
+  <br>  
+  <label for="rat">Avaliação:</label>
+  <input class="form-control" id="name-inp-rat" [(ngModel)]="filme.rating" placeholder="">
+  <br>
+  <div id="first">
+    <button class="btn btn-secondary" (click)="goBack()">go back</button>
+    <button class="btn btn-primary" (click)="save()">save</button>
+  </div>
+</div>
